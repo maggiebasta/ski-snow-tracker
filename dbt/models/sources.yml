@@ -1,0 +1,42 @@
+version: 2
+
+sources:
+  - name: raw
+    database: postgres
+    schema: public
+    tables:
+      - name: snow_reports
+        description: Combined snow reports from SNOTEL and Weather Unlocked
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: resort_name
+            description: Name of the ski resort or SNOTEL station
+            tests:
+              - not_null
+          - name: state
+            description: US state where the resort is located
+          - name: timestamp
+            description: When the data was collected
+            tests:
+              - not_null
+          - name: snow_depth
+            description: Current snow depth in inches
+          - name: new_snow_24h
+            description: New snow in last 24 hours
+          - name: new_snow_72h
+            description: New snow in last 72 hours
+          - name: new_snow_7d
+            description: New snow in last 7 days
+          - name: elevation
+            description: Resort base elevation in feet
+          - name: temperature
+            description: Current temperature in Fahrenheit
+          - name: data_source
+            description: Source of the data (SNOTEL or WeatherUnlocked)
+            tests:
+              - accepted_values:
+                  values: ['SNOTEL', 'WeatherUnlocked']

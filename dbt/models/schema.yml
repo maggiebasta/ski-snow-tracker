@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_snotel
+    description: Staged SNOTEL snow reports
+    columns:
+      - name: id
+        description: Primary key
+      - name: resort_name
+        description: Name of the SNOTEL station
+      - name: state
+        description: US state where the station is located
+
+  - name: stg_weather_unlocked
+    description: Staged Weather Unlocked snow reports
+    columns:
+      - name: id
+        description: Primary key
+      - name: resort_name
+        description: Name of the ski resort
+      - name: state
+        description: US state where the resort is located
+
+  - name: top_snow_resorts
+    description: Combined and ranked snow reports from all sources
+    columns:
+      - name: resort_name
+        description: Name of the resort or station
+      - name: state
+        description: US state location
+      - name: snow_last_7d
+        description: New snow in the last 7 days
+      - name: current_snow_depth
+        description: Current snow depth
+      - name: last_updated
+        description: Last update timestamp
