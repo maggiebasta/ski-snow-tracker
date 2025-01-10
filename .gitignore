@@ -1,0 +1,1 @@
+# Python\n__pycache__/\n*.py[cod]\n*.class\n*.so\n.Python\nenv/\nbuild/\ndevelop-eggs/\ndist/\ndownloads/\neggs/\n.eggs/\nlib/\nlib64/\nparts/\nsdist/\nvar/\nwheels/\n*.egg-info/\n.installed.cfg\n*.egg\n\n# Environment\n.env\n.env.local\n.env.*.local\n\n# DBT\ntarget/\ndbt_packages/\nlogs/\n\n# IDE\n.idea/\n.vscode/\n*.swp\n*.swo\n\n# Logs\n*.log
