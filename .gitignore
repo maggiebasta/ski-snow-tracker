@@ -1,15 +1,41 @@
-.env
+# Python
 __pycache__/
-*.pyc
-.pytest_cache/
-.coverage
-htmlcov/
-dist/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
 build/
-*.egg-info/
+develop-eggs/
+dist/
+downloads/
+eggs/
 .eggs/
-*.log
-.dbt/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# DBT
+target/
 dbt_packages/
 logs/
-target/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
