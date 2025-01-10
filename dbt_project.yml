@@ -1,0 +1,39 @@
+name: 'ski_weather'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ski_weather'
+
+model-paths: ["dbt/models"]
+analysis-paths: ["dbt/analyses"]
+test-paths: ["dbt/tests"]
+seed-paths: ["dbt/seeds"]
+macro-paths: ["dbt/macros"]
+snapshot-paths: ["dbt/snapshots"]
+
+target-path: "dbt/target"
+clean-targets:
+  - "dbt/target"
+  - "dbt_packages"
+
+models:
+  ski_weather:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
+
+seeds:
+  ski_weather:
+    +schema: raw
+
+models:
+  ski_weather:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
